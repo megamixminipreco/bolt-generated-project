@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --secondary: #10b981;
+  --background: #0f172a;
+  --text: #e2e8f0;
+  --card-background: #1e293b;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  @apply antialiased;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 
+         transform hover:-translate-y-1 hover:shadow-lg 
+         focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-opacity-90 focus:ring-primary;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-opacity-90 focus:ring-secondary;
+}
+
+/* Subtle gradient background */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--background) 0%, #1e293b 100%);
+}
+
+/* Glassmorphism effect */
+.glass-card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
